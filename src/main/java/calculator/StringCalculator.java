@@ -63,4 +63,13 @@ private boolean isEmpty() {
 	
 	return false;
 }
+
+private boolean isNumeric(String str) {
+    try {
+        Double.parseDouble(str);
+    } catch (NumberFormatException nfe) {
+        return false;
+    }
+    return true;
+}
 }
