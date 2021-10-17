@@ -72,4 +72,30 @@ private boolean isNumeric(String str) {
     }
     return true;
 }
+
+private char getCustomDelimiter(String line) {
+    if (line == null || line.isEmpty()) {
+        return ',';
+    }
+    if (isNumeric(line)) {
+        return ',';
+    }
+    if (line.length() == 1) {
+        return line.charAt(0);
+    }
+    return ',';
+}
+
+private char getDelimiter(String line) {
+    if (line == null || line.isEmpty()) {
+        return ',';
+    }
+    if (isNumeric(line)) {
+        return ',';
+    }
+    if (line.length() == 1) {
+        return line.charAt(0);
+    }
+    return ',';
+}
 }
