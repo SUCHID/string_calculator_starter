@@ -17,4 +17,15 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(1, stringCalculator.add("1"));
     }
+    @Test
+    public void shouldReturnSumOnTwoNumbersDelimitedBycomma() {
+    	StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(3, stringCalculator .add("1,2"));
+    	
+    }
+    @Test
+    public void moreDigitsSupported() {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(77, stringCalculator.calculate("22,55"));
+    }
 }
